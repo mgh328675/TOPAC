@@ -18,14 +18,14 @@ from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio,    HighQualityVideo,    LowQualityVideo,    MediumQualityVideo
 from youtubesearchpython import VideosSearch
 from config import HNDLR, bot, call_py
-from MusicTop.helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue
-from MusicTop.helpers.decorators import authorized_users_only
-from MusicTop.helpers.handlers import skip_current_song, skip_item
+from music.helpers.queues import QUEUE, add_to_queue, get_queue, clear_queue
+from music.helpers.decorators import authorized_users_only
+from music.helpers.handlers import skip_current_song, skip_item
 from pyrogram.errors import FloodWait, MessageNotModified
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from config import HNDLR, SUDO_USERS
-from MusicTop.helpers.merrors import capture_err
+from music.helpers.merrors import capture_err
 ARQ_API_KEY = "QFOTZM-GSZUFY-CHGHRX-TDEHOZ-ARQ"
 aiohttpsession = aiohttp.ClientSession()
 arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
@@ -91,7 +91,7 @@ async def play(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/8a097ff16947d1c0ffd48.jpg",
+                    photo="https://t.me/smcun/5",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
@@ -102,7 +102,7 @@ async def play(client, m: Message):
                 add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 await huehue.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/8a097ff16947d1c0ffd48.jpg",
+                    photo="https://t.me/smcun/5",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
@@ -196,7 +196,7 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/8a097ff16947d1c0ffd48.jpg",
+                    photo="https://t.me/smcun/5",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
@@ -219,7 +219,7 @@ async def vplay(client, m: Message):
                 await huehue.delete()
                 # await m.reply_to_message.delete()
                 await m.reply_photo(
-                    photo="https://telegra.ph/file/8a097ff16947d1c0ffd48.jpg",
+                    photo="https://t.me/smcun/5",
                     caption=f"""
 **🏷️ العنوان : [{songname}]({link})
 💬 ايدي المحادثه : {chat_id}
@@ -305,7 +305,7 @@ async def playfrom(client, m: Message):
                     await call_py.join_group_call(                        chat_id,                        AudioPiped(location),                        stream_type=StreamType().pulse_stream,                    )
                     add_to_queue(chat_id, songname, location, link, "Audio", 0)
                     await m.reply_photo(
-                        photo="https://telegra.ph/file/8a097ff16947d1c0ffd48.jpg",
+                        photo="https://t.me/smcun/5",
                         caption=f"""
 **▶ ابدأ تشغيل الأغاني من {chat}
 🏷️ العنوان : [{songname}]({link})
@@ -407,5 +407,3 @@ async def resume(client, m: Message):
             await m.reply(f"**هناك خطأ ** \n`{e}`")
     else:
         await m.reply("**❌ لا شيء متوقف مؤقتا حاليا !**")
-
-
