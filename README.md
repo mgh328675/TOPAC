@@ -6,5 +6,7 @@
 
 
 قناة السورس : https://t.me/OYOYV
+
 قناة السورس : https://t.me/Sl3SI
+
 مطور السورس : https://t.me/GTT_G
